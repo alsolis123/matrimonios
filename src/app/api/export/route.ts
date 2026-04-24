@@ -4,6 +4,24 @@ import {
   isAdminSessionValueValid,
 } from "@/lib/admin/session";
 import { createSupabaseAdminClient } from "@/lib/supabase/server";
+import type { Database } from "@/lib/supabase/types";
+
+type SubmissionExportRow = Pick<
+  Database["public"]["Tables"]["submissions"]["Row"],
+  "id" | "public_token" | "audience" | "status" | "started_at" | "completed_at"
+>;
+type AnswerExportRow = Pick<
+  Database["public"]["Tables"]["answers"]["Row"],
+  "submission_id" | "question_id" | "score" | "created_at"
+>;
+type QuestionExportRow = Pick<
+  Database["public"]["Tables"]["questions"]["Row"],
+  "id" | "category_id" | "prompt" | "order_in_survey" | "order_in_category"
+>;
+type CategoryExportRow = Pick<
+  Database["public"]["Tables"]["categories"]["Row"],
+  "id" | "title"
+>;
 
 function escapeCsvValue(value: string | number | null) {
   if (value === null) {
@@ -59,14 +77,19 @@ export async function GET() {
     );
   }
 
+  const safeSubmissions = (submissions ?? []) as SubmissionExportRow[];
+  const safeAnswers = (answers ?? []) as AnswerExportRow[];
+  const safeQuestions = (questions ?? []) as QuestionExportRow[];
+  const safeCategories = (categories ?? []) as CategoryExportRow[];
+
   const submissionMap = new Map(
-    (submissions ?? []).map((submission) => [submission.id, submission]),
+    safeSubmissions.map((submission) => [submission.id, submission]),
   );
   const questionMap = new Map(
-    (questions ?? []).map((question) => [question.id, question]),
+    safeQuestions.map((question) => [question.id, question]),
   );
   const categoryMap = new Map(
-    (categories ?? []).map((category) => [category.id, category]),
+    safeCategories.map((category) => [category.id, category]),
   );
 
   const header = [
@@ -84,7 +107,7 @@ export async function GET() {
     "answer_created_at",
   ];
 
-  const rows = (answers ?? [])
+  const rows = safeAnswers
     .map((answer) => {
       const submission = submissionMap.get(answer.submission_id);
       const question = questionMap.get(answer.question_id);

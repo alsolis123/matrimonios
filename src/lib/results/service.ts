@@ -1,6 +1,20 @@
 import { buildSurveyScoreSummary } from "@/lib/scoring/service";
 import { createSupabaseAdminClient } from "@/lib/supabase/server";
+import type { Database } from "@/lib/supabase/types";
 import type { SurveyCategory } from "@/types";
+
+type SubmissionResultRow = Pick<
+  Database["public"]["Tables"]["submissions"]["Row"],
+  "id" | "audience" | "completed_at"
+>;
+type AnswerResultRow = Pick<
+  Database["public"]["Tables"]["answers"]["Row"],
+  "question_id" | "score"
+>;
+type QuestionResultRow = Pick<
+  Database["public"]["Tables"]["questions"]["Row"],
+  "id" | "category_id"
+>;
 
 export type SurveyResultData = {
   submission: {
@@ -26,24 +40,30 @@ export async function getSurveyResultByToken(
     return null;
   }
 
+  const safeSubmission = submission as SubmissionResultRow;
+
   const { data: answers } = await supabase
     .from("answers")
     .select("question_id, score")
-    .eq("submission_id", submission.id);
+    .eq("submission_id", safeSubmission.id);
 
-  const questionIds = answers?.map((answer) => answer.question_id) ?? [];
+  const safeAnswers = (answers ?? []) as AnswerResultRow[];
+
+  const questionIds = safeAnswers.map((answer) => answer.question_id);
 
   const { data: questions } = await supabase
     .from("questions")
     .select("id, category_id")
     .in("id", questionIds);
 
+  const safeQuestions = (questions ?? []) as QuestionResultRow[];
+
   const questionMap = new Map(
-    (questions ?? []).map((question) => [question.id, question]),
+    safeQuestions.map((question) => [question.id, question]),
   );
 
   const summary = buildSurveyScoreSummary(
-    (answers ?? [])
+    safeAnswers
       .map((answer) => {
         const question = questionMap.get(answer.question_id);
 
@@ -66,9 +86,9 @@ export async function getSurveyResultByToken(
 
   return {
     submission: {
-      id: submission.id,
-      audience: submission.audience,
-      completedAt: submission.completed_at,
+      id: safeSubmission.id,
+      audience: safeSubmission.audience,
+      completedAt: safeSubmission.completed_at,
     },
     summary,
   };

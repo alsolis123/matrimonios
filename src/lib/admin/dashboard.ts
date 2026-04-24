@@ -1,6 +1,20 @@
 import { buildSurveyScoreSummary } from "@/lib/scoring/service";
 import { createSupabaseAdminClient } from "@/lib/supabase/server";
+import type { Database } from "@/lib/supabase/types";
 import type { SurveyCategory } from "@/types";
+
+type SubmissionDashboardRow = Pick<
+  Database["public"]["Tables"]["submissions"]["Row"],
+  "id" | "audience" | "completed_at"
+>;
+type AnswerDashboardRow = Pick<
+  Database["public"]["Tables"]["answers"]["Row"],
+  "question_id" | "score" | "submission_id"
+>;
+type QuestionDashboardRow = Pick<
+  Database["public"]["Tables"]["questions"]["Row"],
+  "id" | "category_id"
+>;
 
 export type AdminDashboardData = {
   totalSubmissions: number;
@@ -31,12 +45,16 @@ export async function getAdminDashboardData(): Promise<AdminDashboardData> {
     throw new Error("No se pudieron cargar los datos administrativos.");
   }
 
+  const safeSubmissions = (submissions ?? []) as SubmissionDashboardRow[];
+  const safeAnswers = (answers ?? []) as AnswerDashboardRow[];
+  const safeQuestions = (questions ?? []) as QuestionDashboardRow[];
+
   const questionMap = new Map(
-    (questions ?? []).map((question) => [question.id, question.category_id]),
+    safeQuestions.map((question) => [question.id, question.category_id]),
   );
 
   const scoreSummary = buildSurveyScoreSummary(
-    (answers ?? [])
+    safeAnswers
       .map((answer) => {
         const categoryId = questionMap.get(answer.question_id);
 
@@ -57,12 +75,12 @@ export async function getAdminDashboardData(): Promise<AdminDashboardData> {
       ),
   );
 
-  const totalSubmissions = submissions?.length ?? 0;
+  const totalSubmissions = safeSubmissions.length;
   const menCount =
-    submissions?.filter((submission) => submission.audience === "man").length ?? 0;
+    safeSubmissions.filter((submission) => submission.audience === "man").length;
   const womenCount =
-    submissions?.filter((submission) => submission.audience === "woman").length ?? 0;
-  const latestCompletion = submissions?.[0]?.completed_at ?? null;
+    safeSubmissions.filter((submission) => submission.audience === "woman").length;
+  const latestCompletion = safeSubmissions[0]?.completed_at ?? null;
 
   return {
     totalSubmissions,
