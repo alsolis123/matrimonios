@@ -1,6 +1,20 @@
 import type { Gender } from "@/types";
 import { getSurveyDefinition } from "@/lib/questions/service";
 import { createSupabaseAdminClient } from "@/lib/supabase/server";
+import type { Database } from "@/lib/supabase/types";
+
+type QuestionSetRow = Pick<
+  Database["public"]["Tables"]["question_sets"]["Row"],
+  "id"
+>;
+type QuestionSurveyRow = Pick<
+  Database["public"]["Tables"]["questions"]["Row"],
+  "id" | "order_in_survey"
+>;
+type SubmissionInsertRow = Pick<
+  Database["public"]["Tables"]["submissions"]["Row"],
+  "id" | "public_token"
+>;
 
 function isGender(value: string | null): value is Gender {
   return value === "man" || value === "woman";
@@ -144,10 +158,12 @@ export async function POST(request: Request) {
     );
   }
 
+  const safeQuestionSet = questionSet as QuestionSetRow;
+
   const { data: questions, error: questionsError } = await supabase
     .from("questions")
     .select("id, order_in_survey")
-    .eq("question_set_id", questionSet.id)
+    .eq("question_set_id", safeQuestionSet.id)
     .eq("is_active", true)
     .order("order_in_survey", { ascending: true });
 
@@ -161,7 +177,9 @@ export async function POST(request: Request) {
     );
   }
 
-  if (questions.length !== 20) {
+  const safeQuestions = (questions ?? []) as QuestionSurveyRow[];
+
+  if (safeQuestions.length !== 20) {
     return Response.json(
       {
         ok: false,
@@ -171,7 +189,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const answersToInsert = questions.map((question) => {
+  const answersToInsert = safeQuestions.map((question) => {
     const score = uniqueAnswers.get(question.order_in_survey);
 
     if (typeof score !== "number") {
@@ -204,16 +222,18 @@ export async function POST(request: Request) {
     );
   }
 
+  const safeSubmission = submission as SubmissionInsertRow;
+
   const { error: answersError } = await supabase.from("answers").insert(
     answersToInsert.map((answer) => ({
-      submission_id: submission.id,
+      submission_id: safeSubmission.id,
       question_id: answer.question_id,
       score: answer.score,
     })),
   );
 
   if (answersError) {
-    await supabase.from("submissions").delete().eq("id", submission.id);
+    await supabase.from("submissions").delete().eq("id", safeSubmission.id);
 
     return Response.json(
       {
@@ -227,8 +247,8 @@ export async function POST(request: Request) {
   return Response.json({
     ok: true,
     data: {
-      submissionId: submission.id,
-      publicToken: submission.public_token,
+      submissionId: safeSubmission.id,
+      publicToken: safeSubmission.public_token,
     },
   });
 }
