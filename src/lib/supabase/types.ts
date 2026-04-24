@@ -27,6 +27,7 @@ export type Database = {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["categories"]["Insert"]>;
+        Relationships: [];
       };
       question_sets: {
         Row: {
@@ -44,6 +45,7 @@ export type Database = {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["question_sets"]["Insert"]>;
+        Relationships: [];
       };
       questions: {
         Row: {
@@ -67,6 +69,7 @@ export type Database = {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["questions"]["Insert"]>;
+        Relationships: [];
       };
       submissions: {
         Row: {
@@ -90,6 +93,7 @@ export type Database = {
           ip_hash?: string | null;
         };
         Update: Partial<Database["public"]["Tables"]["submissions"]["Insert"]>;
+        Relationships: [];
       };
       answers: {
         Row: {
@@ -107,6 +111,7 @@ export type Database = {
           created_at?: string;
         };
         Update: Partial<Database["public"]["Tables"]["answers"]["Insert"]>;
+        Relationships: [];
       };
     };
     Views: Record<string, never>;
