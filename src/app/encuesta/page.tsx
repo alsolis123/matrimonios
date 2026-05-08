@@ -8,11 +8,11 @@ import type { Gender } from "@/types";
 type SurveyState = "audience" | "intro" | "questions";
 
 const scoreOptions = [
-  { value: 1, label: "1", hint: "Muy poco" },
-  { value: 2, label: "2", hint: "Poco" },
+  { value: 1, label: "1", hint: "Nunca" },
+  { value: 2, label: "2", hint: "Casi nunca" },
   { value: 3, label: "3", hint: "A veces" },
-  { value: 4, label: "4", hint: "Frecuente" },
-  { value: 5, label: "5", hint: "Constante" },
+  { value: 4, label: "4", hint: "Casi siempre" },
+  { value: 5, label: "5", hint: "Siempre" },
 ];
 
 export default function SurveyPage() {
@@ -250,7 +250,7 @@ export default function SurveyPage() {
                   </p>
                   <p className="mt-2 text-sm text-stone-300">
                     Son {survey.questions.length} preguntas con escala del 1 al
-                    5.
+                    5, pensando especialmente en las ultimas 2 semanas.
                   </p>
                 </div>
 

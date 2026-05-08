@@ -5,19 +5,21 @@ import type {
 } from "@/types";
 
 export const participantIntroNote =
-  "Este formulario es personal y confidencial. Responde con honestidad delante de Dios, pensando en la condicion real de tu matrimonio y no solo en como te gustaria que fuera visto. El proposito de esta evaluacion no es la condenacion, sino ayudar a identificar fortalezas y areas que necesitan crecer para que Cristo sea visto con mas claridad en tu matrimonio.";
+  "Este formulario es personal y confidencial. Responde con honestidad delante de Dios, pensando en la condicion real de tu matrimonio, especialmente durante las ultimas 2 semanas, y no solo en como te gustaria que fuera visto. El proposito de esta evaluacion no es la condenacion, sino ayudar a identificar fortalezas y areas que necesitan crecer para que Cristo sea visto con mas claridad en tu matrimonio.";
 
 export const categories: CategoryDefinition[] = [
   {
     id: "communion-with-christ",
     title: "Comunion con Cristo",
-    description: "Vida espiritual, devocion, oracion y liderazgo centrado en Cristo dentro del hogar.",
+    description:
+      "Vida espiritual, devocion, oracion y liderazgo centrado en Cristo dentro del hogar.",
     sortOrder: 1,
   },
   {
     id: "love-and-order-in-the-home",
     title: "Amor y orden en el hogar",
-    description: "Servicio, liderazgo, respeto y responsabilidad diaria dentro del hogar.",
+    description:
+      "Servicio, liderazgo, respeto y responsabilidad diaria dentro del hogar.",
     sortOrder: 2,
   },
   {
@@ -45,8 +47,7 @@ export const questions: QuestionDefinition[] = [
     categoryId: "communion-with-christ",
     orderInSurvey: 1,
     orderInCategory: 1,
-    prompt:
-      "En las ultimas semanas, he apartado con constancia tiempo para orar y meditar en la Palabra de Dios, o he descuidado mi comunion con Dios?",
+    prompt: "En las ultimas 2 semanas, aparte tiempo personal para orar.",
   },
   {
     audience: "man",
@@ -54,7 +55,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 2,
     orderInCategory: 2,
     prompt:
-      "Suelo iniciar o promover los devocionales familiares en casa, en lugar de esperar a que ocurran solo de vez en cuando?",
+      "En las ultimas 2 semanas, lei la Biblia con atencion y no solo por costumbre.",
   },
   {
     audience: "man",
@@ -62,7 +63,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 3,
     orderInCategory: 3,
     prompt:
-      "Cuando debo tomar decisiones para mi hogar, busco primero la direccion de Dios, o actuo solo segun mi propio criterio?",
+      "En las ultimas 2 semanas, pedi la direccion de Dios antes de tomar decisiones importantes del hogar.",
   },
   {
     audience: "man",
@@ -70,7 +71,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 4,
     orderInCategory: 4,
     prompt:
-      "Puede mi esposa ver evidencia real de piedad en mi vida diaria, como dominio propio, oracion, obediencia y temor de Dios?",
+      "En las ultimas 2 semanas, hable con mi esposa sobre algun tema espiritual.",
   },
   {
     audience: "man",
@@ -78,7 +79,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 5,
     orderInCategory: 5,
     prompt:
-      "Cuando noto frialdad espiritual en mi hogar, asumo la responsabilidad de animar a mi familia hacia Cristo?",
+      "En las ultimas 2 semanas, tome iniciativa para promover la vida espiritual de mi hogar.",
   },
   {
     audience: "man",
@@ -86,7 +87,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 6,
     orderInCategory: 1,
     prompt:
-      "Sirvo a mi esposa en necesidades concretas del dia a dia, o normalmente espero ser servido?",
+      "En las ultimas 2 semanas, servi a mi esposa en necesidades concretas del dia a dia.",
   },
   {
     audience: "man",
@@ -94,7 +95,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 7,
     orderInCategory: 2,
     prompt:
-      "Mi liderazgo en el hogar se refleja en cuidado, ejemplo y sacrificio, o mas bien en imposicion, pasividad o comodidad?",
+      "En las ultimas 2 semanas, asumi responsabilidad en decisiones del hogar sin evadirlas.",
   },
   {
     audience: "man",
@@ -102,7 +103,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 8,
     orderInCategory: 3,
     prompt:
-      "Tomo la iniciativa de hablar con mi esposa sobre sus cargas espirituales, emocionales y practicas?",
+      "En las ultimas 2 semanas, pregunte a mi esposa como se sentia y la escuche con atencion.",
   },
   {
     audience: "man",
@@ -110,7 +111,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 9,
     orderInCategory: 4,
     prompt:
-      "Asumo mi responsabilidad de guiar el hogar hacia Cristo aun cuando estoy cansado, ocupado o desanimado?",
+      "En las ultimas 2 semanas, ordene mi tiempo de manera que beneficiara a mi hogar.",
   },
   {
     audience: "man",
@@ -118,7 +119,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 10,
     orderInCategory: 5,
     prompt:
-      "Las decisiones que tomo en casa muestran amor y consideracion por mi esposa, o suelen girar principalmente alrededor de mi?",
+      "En las ultimas 2 semanas, mis decisiones en casa consideraron el bienestar de mi esposa.",
   },
   {
     audience: "man",
@@ -126,7 +127,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 11,
     orderInCategory: 1,
     prompt:
-      "Cuando mi esposa me expresa una preocupacion, la escucho con paciencia, o me defiendo antes de entenderla?",
+      "En las ultimas 2 semanas, escuche a mi esposa sin interrumpirla cuando me expreso una preocupacion.",
   },
   {
     audience: "man",
@@ -134,7 +135,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 12,
     orderInCategory: 2,
     prompt:
-      "En medio del conflicto, controlo mi tono, mis palabras y mis gestos, o reacciono con dureza, silencio hiriente o impaciencia?",
+      "En las ultimas 2 semanas, controle mi tono de voz durante un desacuerdo.",
   },
   {
     audience: "man",
@@ -142,7 +143,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 13,
     orderInCategory: 3,
     prompt:
-      "Cuando peco contra mi esposa, pido perdon de forma clara y sincera, sin justificarme ni minimizar lo que hice?",
+      "En las ultimas 2 semanas, evite responder con dureza cuando me senti frustrado.",
   },
   {
     audience: "man",
@@ -150,7 +151,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 14,
     orderInCategory: 4,
     prompt:
-      "Trato a mi esposa con honra tambien en privado, y no solo delante de otros?",
+      "En las ultimas 2 semanas, pedi perdon con claridad cuando falle a mi esposa.",
   },
   {
     audience: "man",
@@ -158,7 +159,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 15,
     orderInCategory: 5,
     prompt:
-      "En las ultimas semanas, he cultivado conversaciones que edifican a mi esposa, o la mayor parte de nuestra interaccion ha sido solo funcional, fria o tensa?",
+      "En las ultimas 2 semanas, hable con mi esposa de forma que la animara.",
   },
   {
     audience: "man",
@@ -166,15 +167,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 16,
     orderInCategory: 1,
     prompt:
-      "He guardado mi mente, mis ojos y mi corazon en fidelidad hacia mi esposa, evitando alimentar pensamientos o conductas impuras?",
+      "En las ultimas 2 semanas, cuide mis ojos y mis pensamientos en fidelidad a mi esposa.",
   },
   {
     audience: "man",
     categoryId: "faithfulness-and-testimony",
     orderInSurvey: 17,
     orderInCategory: 2,
-    prompt:
-      "Administro mi tiempo, dinero y prioridades responsablemente, o he descuidado areas importantes del hogar?",
+    prompt: "En las ultimas 2 semanas, administre con responsabilidad mi tiempo.",
   },
   {
     audience: "man",
@@ -182,7 +182,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 18,
     orderInCategory: 3,
     prompt:
-      "Mi conducta dentro y fuera del hogar refleja el mismo cristianismo, o muestro una imagen distinta segun quien me vea?",
+      "En las ultimas 2 semanas, administre con responsabilidad el dinero o los recursos del hogar.",
   },
   {
     audience: "man",
@@ -190,7 +190,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 19,
     orderInCategory: 4,
     prompt:
-      "Estoy modelando un matrimonio que honra a Cristo delante de mi familia, la iglesia y los demas?",
+      "En las ultimas 2 semanas, mi conducta en casa reflejo el mismo testimonio cristiano que doy en publico.",
   },
   {
     audience: "man",
@@ -198,15 +198,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 20,
     orderInCategory: 5,
     prompt:
-      "Se siente mi esposa segura de mi integridad, consistencia y compromiso con nuestro pacto matrimonial?",
+      "En las ultimas 2 semanas, actue de manera que fortaleciera la confianza de mi esposa en mi.",
   },
   {
     audience: "woman",
     categoryId: "communion-with-christ",
     orderInSurvey: 1,
     orderInCategory: 1,
-    prompt:
-      "En las ultimas semanas, he apartado con constancia tiempo para orar y meditar en la Palabra de Dios, o he descuidado mi comunion con Dios?",
+    prompt: "En las ultimas 2 semanas, aparte tiempo personal para orar.",
   },
   {
     audience: "woman",
@@ -214,7 +213,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 2,
     orderInCategory: 2,
     prompt:
-      "Participo con disposicion y seriedad en los devocionales familiares, en lugar de tratarlos como algo secundario?",
+      "En las ultimas 2 semanas, lei la Biblia con atencion y no solo por costumbre.",
   },
   {
     audience: "woman",
@@ -222,7 +221,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 3,
     orderInCategory: 3,
     prompt:
-      "Cuando enfrento cargas o frustraciones en el hogar, busco primero al Senor antes de reaccionar?",
+      "En las ultimas 2 semanas, busque al Senor antes de reaccionar en momentos de carga o frustracion.",
   },
   {
     audience: "woman",
@@ -230,7 +229,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 4,
     orderInCategory: 4,
     prompt:
-      "Puede mi esposo ver evidencia real de piedad en mi vida diaria, como mansedumbre, obediencia, oracion y temor de Dios?",
+      "En las ultimas 2 semanas, hable con mi esposo sobre algun tema espiritual.",
   },
   {
     audience: "woman",
@@ -238,15 +237,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 5,
     orderInCategory: 5,
     prompt:
-      "Cuando noto frialdad espiritual en mi hogar, animo a mi familia hacia Cristo con un ejemplo y actitud piadosos?",
+      "En las ultimas 2 semanas, contribui con mi actitud a la vida espiritual de mi hogar.",
   },
   {
     audience: "woman",
     categoryId: "love-and-order-in-the-home",
     orderInSurvey: 6,
     orderInCategory: 1,
-    prompt:
-      "Trato a mi esposo con respeto en la forma en que le hablo, lo corrijo y me refiero a el?",
+    prompt: "En las ultimas 2 semanas, hable a mi esposo con respeto.",
   },
   {
     audience: "woman",
@@ -254,7 +252,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 7,
     orderInCategory: 2,
     prompt:
-      "Me someto a su liderazgo con amor cuando no implica pecado, o suelo resistirlo por orgullo, enojo o deseo de controlar?",
+      "En las ultimas 2 semanas, apoye la direccion de mi esposo cuando no implicaba pecado.",
   },
   {
     audience: "woman",
@@ -262,7 +260,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 8,
     orderInCategory: 3,
     prompt:
-      "Apoyo a mi esposo en su responsabilidad espiritual, o debilito su liderazgo con critica constante, desprecio o indiferencia?",
+      "En las ultimas 2 semanas, evite debilitar a mi esposo con critica constante.",
   },
   {
     audience: "woman",
@@ -270,7 +268,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 9,
     orderInCategory: 4,
     prompt:
-      "Procuro edificar el ambiente del hogar con sabiduria, servicio y disposicion, aun en dias dificiles?",
+      "En las ultimas 2 semanas, servi en mi hogar con disposicion aun en dias dificiles.",
   },
   {
     audience: "woman",
@@ -278,7 +276,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 10,
     orderInCategory: 5,
     prompt:
-      "Las actitudes que llevo al hogar ayudan a crear paz y orden, o suelen aumentar la tension y el desgaste?",
+      "En las ultimas 2 semanas, mis actitudes ayudaron a crear paz en casa.",
   },
   {
     audience: "woman",
@@ -286,7 +284,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 11,
     orderInCategory: 1,
     prompt:
-      "Cuando mi esposo me habla sobre algo que necesita correccion o conversacion, escucho con humildad, o reacciono de inmediato con actitud defensiva o molestia?",
+      "En las ultimas 2 semanas, escuche a mi esposo con humildad cuando me hablo de algo que debia corregir.",
   },
   {
     audience: "woman",
@@ -294,7 +292,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 12,
     orderInCategory: 2,
     prompt:
-      "En medio del conflicto, controlo mi tono, mis palabras y mis gestos, o reacciono con dureza, desprecio o silencio hiriente?",
+      "En las ultimas 2 semanas, controle mi tono de voz durante un desacuerdo.",
   },
   {
     audience: "woman",
@@ -302,7 +300,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 13,
     orderInCategory: 3,
     prompt:
-      "Cuando peco contra mi esposo, pido perdon de forma clara y sincera, sin justificarme ni trasladar la culpa?",
+      "En las ultimas 2 semanas, evite responder con desprecio, sarcasmo o frialdad.",
   },
   {
     audience: "woman",
@@ -310,7 +308,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 14,
     orderInCategory: 4,
     prompt:
-      "Evito usar palabras, comparaciones o actitudes que humillen o debiliten a mi esposo?",
+      "En las ultimas 2 semanas, pedi perdon con claridad cuando falle a mi esposo.",
   },
   {
     audience: "woman",
@@ -318,7 +316,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 15,
     orderInCategory: 5,
     prompt:
-      "En las ultimas semanas, he procurado hablar a mi esposo de una manera que lo haga sentirse respetado, animado y edificado?",
+      "En las ultimas 2 semanas, hable con mi esposo de forma que lo animara y edificara.",
   },
   {
     audience: "woman",
@@ -326,15 +324,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 16,
     orderInCategory: 1,
     prompt:
-      "He guardado mi mente, mis ojos y mi corazon en fidelidad hacia mi esposo, evitando alimentar pensamientos o conductas impuras?",
+      "En las ultimas 2 semanas, cuide mis ojos y mis pensamientos en fidelidad a mi esposo.",
   },
   {
     audience: "woman",
     categoryId: "faithfulness-and-testimony",
     orderInSurvey: 17,
     orderInCategory: 2,
-    prompt:
-      "Administro mi tiempo, recursos y prioridades responsablemente dentro del hogar?",
+    prompt: "En las ultimas 2 semanas, administre con responsabilidad mi tiempo.",
   },
   {
     audience: "woman",
@@ -342,7 +339,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 18,
     orderInCategory: 3,
     prompt:
-      "Mi conducta dentro y fuera del hogar refleja el mismo cristianismo, o proyecto una imagen distinta segun quien me vea?",
+      "En las ultimas 2 semanas, administre con responsabilidad los recursos del hogar.",
   },
   {
     audience: "woman",
@@ -350,7 +347,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 19,
     orderInCategory: 4,
     prompt:
-      "Estoy contribuyendo a que nuestro matrimonio refleje a Cristo delante de la familia, la iglesia y los demas?",
+      "En las ultimas 2 semanas, mi conducta en casa reflejo el mismo testimonio cristiano que doy en publico.",
   },
   {
     audience: "woman",
@@ -358,6 +355,6 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 20,
     orderInCategory: 5,
     prompt:
-      "Puede mi esposo confiar en mi integridad, consistencia y compromiso con nuestro pacto matrimonial?",
+      "En las ultimas 2 semanas, actue de manera que fortaleciera la confianza de mi esposo en mi.",
   },
 ];
