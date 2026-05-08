@@ -5,14 +5,14 @@ import type {
 } from "@/types";
 
 export const participantIntroNote =
-  "Este formulario es personal y confidencial. Responde con honestidad delante de Dios, pensando en la condicion real de tu matrimonio, especialmente durante las ultimas 2 semanas, y no solo en como te gustaria que fuera visto. El proposito de esta evaluacion no es la condenacion, sino ayudar a identificar fortalezas y areas que necesitan crecer para que Cristo sea visto con mas claridad en tu matrimonio.";
+  "Este formulario es personal y confidencial. Responde con honestidad delante de Dios, pensando en la condición real de tu matrimonio, especialmente durante las últimas 2 semanas, y no solo en cómo te gustaría que fuera visto. El propósito de esta evaluación no es la condenación, sino ayudar a identificar fortalezas y áreas que necesitan crecer para que Cristo sea visto con más claridad en tu matrimonio.";
 
 export const categories: CategoryDefinition[] = [
   {
     id: "communion-with-christ",
-    title: "Comunion con Cristo",
+    title: "Comunión con Cristo",
     description:
-      "Vida espiritual, devocion, oracion y liderazgo centrado en Cristo dentro del hogar.",
+      "Vida espiritual, devoción, oración y liderazgo centrado en Cristo dentro del hogar.",
     sortOrder: 1,
   },
   {
@@ -24,14 +24,14 @@ export const categories: CategoryDefinition[] = [
   },
   {
     id: "grace-in-the-relationship",
-    title: "Gracia en la relacion",
-    description: "Escucha, perdon, tono, conflicto y honra mutua en el matrimonio.",
+    title: "Gracia en la relación",
+    description: "Escucha, perdón, tono, conflicto y honra mutua en el matrimonio.",
     sortOrder: 3,
   },
   {
     id: "faithfulness-and-testimony",
     title: "Fidelidad y testimonio",
-    description: "Integridad, consistencia, mayordomia y testimonio cristiano visible.",
+    description: "Integridad, consistencia, mayordomía y testimonio cristiano visible.",
     sortOrder: 4,
   },
 ];
@@ -47,7 +47,7 @@ export const questions: QuestionDefinition[] = [
     categoryId: "communion-with-christ",
     orderInSurvey: 1,
     orderInCategory: 1,
-    prompt: "En las ultimas 2 semanas, aparte tiempo personal para orar.",
+    prompt: "En las últimas 2 semanas, aparté tiempo personal para orar.",
   },
   {
     audience: "man",
@@ -55,7 +55,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 2,
     orderInCategory: 2,
     prompt:
-      "En las ultimas 2 semanas, lei la Biblia con atencion y no solo por costumbre.",
+      "En las últimas 2 semanas, leí la Biblia con atención y no solo por costumbre.",
   },
   {
     audience: "man",
@@ -63,7 +63,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 3,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, pedi la direccion de Dios antes de tomar decisiones importantes del hogar.",
+      "En las últimas 2 semanas, pedí la dirección de Dios antes de tomar decisiones importantes del hogar.",
   },
   {
     audience: "man",
@@ -71,7 +71,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 4,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, hable con mi esposa sobre algun tema espiritual.",
+      "En las últimas 2 semanas, hablé con mi esposa sobre algún tema espiritual.",
   },
   {
     audience: "man",
@@ -79,7 +79,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 5,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, tome iniciativa para promover la vida espiritual de mi hogar.",
+      "En las últimas 2 semanas, tomé iniciativa para promover la vida espiritual de mi hogar.",
   },
   {
     audience: "man",
@@ -87,7 +87,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 6,
     orderInCategory: 1,
     prompt:
-      "En las ultimas 2 semanas, servi a mi esposa en necesidades concretas del dia a dia.",
+      "En las últimas 2 semanas, serví a mi esposa en necesidades concretas del día a día.",
   },
   {
     audience: "man",
@@ -95,7 +95,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 7,
     orderInCategory: 2,
     prompt:
-      "En las ultimas 2 semanas, asumi responsabilidad en decisiones del hogar sin evadirlas.",
+      "En las últimas 2 semanas, asumí responsabilidad en decisiones del hogar sin evadirlas.",
   },
   {
     audience: "man",
@@ -103,7 +103,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 8,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, pregunte a mi esposa como se sentia y la escuche con atencion.",
+      "En las últimas 2 semanas, pregunté a mi esposa cómo se sentía y la escuché con atención.",
   },
   {
     audience: "man",
@@ -111,7 +111,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 9,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, ordene mi tiempo de manera que beneficiara a mi hogar.",
+      "En las últimas 2 semanas, ordené mi tiempo de manera que beneficiara a mi hogar.",
   },
   {
     audience: "man",
@@ -119,7 +119,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 10,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, mis decisiones en casa consideraron el bienestar de mi esposa.",
+      "En las últimas 2 semanas, mis decisiones en casa consideraron el bienestar de mi esposa.",
   },
   {
     audience: "man",
@@ -127,7 +127,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 11,
     orderInCategory: 1,
     prompt:
-      "En las ultimas 2 semanas, escuche a mi esposa sin interrumpirla cuando me expreso una preocupacion.",
+      "En las últimas 2 semanas, escuché a mi esposa sin interrumpirla cuando me expresó una preocupación.",
   },
   {
     audience: "man",
@@ -135,7 +135,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 12,
     orderInCategory: 2,
     prompt:
-      "En las ultimas 2 semanas, controle mi tono de voz durante un desacuerdo.",
+      "En las últimas 2 semanas, controlé mi tono de voz durante un desacuerdo.",
   },
   {
     audience: "man",
@@ -143,7 +143,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 13,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, evite responder con dureza cuando me senti frustrado.",
+      "En las últimas 2 semanas, evité responder con dureza cuando me sentí frustrado.",
   },
   {
     audience: "man",
@@ -151,7 +151,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 14,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, pedi perdon con claridad cuando falle a mi esposa.",
+      "En las últimas 2 semanas, pedí perdón con claridad cuando fallé a mi esposa.",
   },
   {
     audience: "man",
@@ -159,7 +159,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 15,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, hable con mi esposa de forma que la animara.",
+      "En las últimas 2 semanas, hablé con mi esposa de forma que la animara.",
   },
   {
     audience: "man",
@@ -167,14 +167,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 16,
     orderInCategory: 1,
     prompt:
-      "En las ultimas 2 semanas, cuide mis ojos y mis pensamientos en fidelidad a mi esposa.",
+      "En las últimas 2 semanas, cuidé mis ojos y mis pensamientos en fidelidad a mi esposa.",
   },
   {
     audience: "man",
     categoryId: "faithfulness-and-testimony",
     orderInSurvey: 17,
     orderInCategory: 2,
-    prompt: "En las ultimas 2 semanas, administre con responsabilidad mi tiempo.",
+    prompt: "En las últimas 2 semanas, administré con responsabilidad mi tiempo.",
   },
   {
     audience: "man",
@@ -182,7 +182,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 18,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, administre con responsabilidad el dinero o los recursos del hogar.",
+      "En las últimas 2 semanas, administré con responsabilidad el dinero o los recursos del hogar.",
   },
   {
     audience: "man",
@@ -190,7 +190,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 19,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, mi conducta en casa reflejo el mismo testimonio cristiano que doy en publico.",
+      "En las últimas 2 semanas, mi conducta en casa reflejó el mismo testimonio cristiano que doy en público.",
   },
   {
     audience: "man",
@@ -198,14 +198,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 20,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, actue de manera que fortaleciera la confianza de mi esposa en mi.",
+      "En las últimas 2 semanas, actué de manera que fortaleciera la confianza de mi esposa en mí.",
   },
   {
     audience: "woman",
     categoryId: "communion-with-christ",
     orderInSurvey: 1,
     orderInCategory: 1,
-    prompt: "En las ultimas 2 semanas, aparte tiempo personal para orar.",
+    prompt: "En las últimas 2 semanas, aparté tiempo personal para orar.",
   },
   {
     audience: "woman",
@@ -213,7 +213,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 2,
     orderInCategory: 2,
     prompt:
-      "En las ultimas 2 semanas, lei la Biblia con atencion y no solo por costumbre.",
+      "En las últimas 2 semanas, leí la Biblia con atención y no solo por costumbre.",
   },
   {
     audience: "woman",
@@ -221,7 +221,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 3,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, busque al Senor antes de reaccionar en momentos de carga o frustracion.",
+      "En las últimas 2 semanas, busqué al Señor antes de reaccionar en momentos de carga o frustración.",
   },
   {
     audience: "woman",
@@ -229,7 +229,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 4,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, hable con mi esposo sobre algun tema espiritual.",
+      "En las últimas 2 semanas, hablé con mi esposo sobre algún tema espiritual.",
   },
   {
     audience: "woman",
@@ -237,14 +237,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 5,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, contribui con mi actitud a la vida espiritual de mi hogar.",
+      "En las últimas 2 semanas, contribuí con mi actitud a la vida espiritual de mi hogar.",
   },
   {
     audience: "woman",
     categoryId: "love-and-order-in-the-home",
     orderInSurvey: 6,
     orderInCategory: 1,
-    prompt: "En las ultimas 2 semanas, hable a mi esposo con respeto.",
+    prompt: "En las últimas 2 semanas, hablé a mi esposo con respeto.",
   },
   {
     audience: "woman",
@@ -252,7 +252,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 7,
     orderInCategory: 2,
     prompt:
-      "En las ultimas 2 semanas, apoye la direccion de mi esposo cuando no implicaba pecado.",
+      "En las últimas 2 semanas, apoyé la dirección de mi esposo cuando no implicaba pecado.",
   },
   {
     audience: "woman",
@@ -260,7 +260,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 8,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, evite debilitar a mi esposo con critica constante.",
+      "En las últimas 2 semanas, evité debilitar a mi esposo con crítica constante.",
   },
   {
     audience: "woman",
@@ -268,7 +268,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 9,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, servi en mi hogar con disposicion aun en dias dificiles.",
+      "En las últimas 2 semanas, serví en mi hogar con disposición aun en días difíciles.",
   },
   {
     audience: "woman",
@@ -276,7 +276,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 10,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, mis actitudes ayudaron a crear paz en casa.",
+      "En las últimas 2 semanas, mis actitudes ayudaron a crear paz en casa.",
   },
   {
     audience: "woman",
@@ -284,7 +284,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 11,
     orderInCategory: 1,
     prompt:
-      "En las ultimas 2 semanas, escuche a mi esposo con humildad cuando me hablo de algo que debia corregir.",
+      "En las últimas 2 semanas, escuché a mi esposo con humildad cuando me habló de algo que debía corregir.",
   },
   {
     audience: "woman",
@@ -292,7 +292,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 12,
     orderInCategory: 2,
     prompt:
-      "En las ultimas 2 semanas, controle mi tono de voz durante un desacuerdo.",
+      "En las últimas 2 semanas, controlé mi tono de voz durante un desacuerdo.",
   },
   {
     audience: "woman",
@@ -300,7 +300,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 13,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, evite responder con desprecio, sarcasmo o frialdad.",
+      "En las últimas 2 semanas, evité responder con desprecio, sarcasmo o frialdad.",
   },
   {
     audience: "woman",
@@ -308,7 +308,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 14,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, pedi perdon con claridad cuando falle a mi esposo.",
+      "En las últimas 2 semanas, pedí perdón con claridad cuando fallé a mi esposo.",
   },
   {
     audience: "woman",
@@ -316,7 +316,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 15,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, hable con mi esposo de forma que lo animara y edificara.",
+      "En las últimas 2 semanas, hablé con mi esposo de forma que lo animara y edificara.",
   },
   {
     audience: "woman",
@@ -324,14 +324,14 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 16,
     orderInCategory: 1,
     prompt:
-      "En las ultimas 2 semanas, cuide mis ojos y mis pensamientos en fidelidad a mi esposo.",
+      "En las últimas 2 semanas, cuidé mis ojos y mis pensamientos en fidelidad a mi esposo.",
   },
   {
     audience: "woman",
     categoryId: "faithfulness-and-testimony",
     orderInSurvey: 17,
     orderInCategory: 2,
-    prompt: "En las ultimas 2 semanas, administre con responsabilidad mi tiempo.",
+    prompt: "En las últimas 2 semanas, administré con responsabilidad mi tiempo.",
   },
   {
     audience: "woman",
@@ -339,7 +339,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 18,
     orderInCategory: 3,
     prompt:
-      "En las ultimas 2 semanas, administre con responsabilidad los recursos del hogar.",
+      "En las últimas 2 semanas, administré con responsabilidad los recursos del hogar.",
   },
   {
     audience: "woman",
@@ -347,7 +347,7 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 19,
     orderInCategory: 4,
     prompt:
-      "En las ultimas 2 semanas, mi conducta en casa reflejo el mismo testimonio cristiano que doy en publico.",
+      "En las últimas 2 semanas, mi conducta en casa reflejó el mismo testimonio cristiano que doy en público.",
   },
   {
     audience: "woman",
@@ -355,6 +355,6 @@ export const questions: QuestionDefinition[] = [
     orderInSurvey: 20,
     orderInCategory: 5,
     prompt:
-      "En las ultimas 2 semanas, actue de manera que fortaleciera la confianza de mi esposo en mi.",
+      "En las últimas 2 semanas, actué de manera que fortaleciera la confianza de mi esposo en mí.",
   },
 ];

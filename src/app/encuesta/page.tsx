@@ -68,7 +68,7 @@ export default function SurveyPage() {
         setSurveyError(
           error instanceof Error
             ? error.message
-            : "Ocurrio un error al cargar la encuesta.",
+            : "Ocurrió un error al cargar la encuesta.",
         );
       } finally {
         if (!cancelled) {
@@ -150,11 +150,11 @@ export default function SurveyPage() {
               Encuesta matrimonial
             </p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-stone-50 sm:text-4xl">
-              Evaluacion personal del matrimonio
+              Evaluación personal del matrimonio
             </h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-stone-200/80 sm:text-base">
               Un recorrido privado, reflexivo y directo para identificar
-              fortalezas y areas que necesitan crecer.
+              fortalezas y áreas que necesitan crecer.
             </p>
           </div>
 
@@ -166,10 +166,10 @@ export default function SurveyPage() {
                     Paso 1
                   </p>
                   <h2 className="mt-3 text-2xl font-semibold text-stone-50">
-                    Selecciona la version de la encuesta
+                    Selecciona la versión de la encuesta
                   </h2>
                   <p className="mt-3 max-w-2xl text-base leading-7 text-stone-300">
-                    Cada participante responde solo la version que le
+                    Cada participante responde solo la versión que le
                     corresponde. El contenido es privado y se guarda sin nombres.
                   </p>
                 </div>
@@ -181,7 +181,7 @@ export default function SurveyPage() {
                     type="button"
                   >
                     <span className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-200/80">
-                      Version
+                      Versión
                     </span>
                     <strong className="mt-3 block text-2xl text-stone-50">
                       Hombre
@@ -198,7 +198,7 @@ export default function SurveyPage() {
                     type="button"
                   >
                     <span className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-200/80">
-                      Version
+                      Versión
                     </span>
                     <strong className="mt-3 block text-2xl text-stone-50">
                       Mujer
@@ -241,7 +241,7 @@ export default function SurveyPage() {
 
                 <div className="rounded-[1.5rem] border border-amber-100/10 bg-black/20 p-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-200/80">
-                    Version elegida
+                    Versión elegida
                   </p>
                   <p className="mt-3 text-xl font-semibold text-stone-50">
                     {survey.audience === "man"
@@ -250,7 +250,7 @@ export default function SurveyPage() {
                   </p>
                   <p className="mt-2 text-sm text-stone-300">
                     Son {survey.questions.length} preguntas con escala del 1 al
-                    5, pensando especialmente en las ultimas 2 semanas.
+                    5, pensando especialmente en las últimas 2 semanas.
                   </p>
                 </div>
 
@@ -264,7 +264,7 @@ export default function SurveyPage() {
                     }}
                     type="button"
                   >
-                    Cambiar version
+                    Cambiar versión
                   </button>
                   <button
                     className="rounded-full bg-amber-300 px-5 py-3 text-sm font-semibold text-stone-950 transition hover:bg-amber-200"
@@ -299,7 +299,7 @@ export default function SurveyPage() {
                     {survey.categories.find(
                       (category) =>
                         category.id === currentQuestion.categoryId,
-                    )?.title ?? "Categoria"}
+                    )?.title ?? "Categoría"}
                   </p>
                   <h2 className="mt-4 text-2xl leading-9 text-stone-50 sm:text-3xl">
                     {currentQuestion.prompt}
